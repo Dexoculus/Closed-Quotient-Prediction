@@ -55,11 +55,11 @@ We thank all contributors and collaborators who supported this research.
 If you use this code or research in your work, please cite the paper:
 > [Prediction of Closed Quotient During Vocal Phonation using GRU-type Neural Network with Audio Signals](https://doi.org/10.56977/jicce.2024.22.2.145)
 
-
+```
 @article{han2024prediction,
   title={Prediction of Closed Quotient During Vocal Phonation using GRU-type Neural Network with Audio Signals},
   author={Han, Hyeonbin and Lee, Keun Young and Shin, Seong-Yoon and Kim, Yoseup and Jo, Gwanghyun and Park, Jihoon and Kim, Young-Min},
   year={2024},
   publisher={Korea Institute of Information and Communication Engineering}
 }
-
+```
