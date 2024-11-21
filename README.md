@@ -34,7 +34,7 @@ This repository includes 4 Deep Neural Network models and 2 Machine Learning mod
 Clone this repository and install the required dependencies:
 
 ```bash
-git clone https://github.com/yourusername/closed-quotient-prediction.git
+git clone https://github.com/Dexoculus/closed-quotient-prediction.git
 cd closed-quotient-prediction
 pip install -r requirements.txt
 ```
