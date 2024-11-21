@@ -20,7 +20,7 @@ We employ GRU-based neural networks to process audio signals, with pitch feature
 ---
 
 ## Key Features
-This repository includes implementations of 4 Deep Neural Network models and 2 Machine Learning models:
+This repository includes 4 Deep Neural Network models and 2 Machine Learning models:
 - **GRU** (Gated Recurrent Unit)
 - **GRU2L** (2 Layers of GRU)
 - **BiGRU** (Bidirectional GRU)
