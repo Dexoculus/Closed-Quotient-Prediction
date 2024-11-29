@@ -1,0 +1,14 @@
+# Ignore all __pycache__
+**/__pycache__/
+
+# Ignore data files
+data/
+
+# Ignore .zip format files
+*.zip
+
+# Ignore documents and others
+document/
+Project1_EGG/
+legacy_code/
+voice/
