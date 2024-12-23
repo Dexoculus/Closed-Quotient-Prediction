@@ -1,0 +1,66 @@
+model:
+  module: 'Module.models'
+  class: 'CNN_GRU' # GRU, BiGRU, CNN_GRU, 
+  args:
+    input_size: 1
+    hidden_size: 32
+    num_layers: 2
+    output_size: 1
+    # num_channels: [if CNN_GRU]
+
+training:
+  epochs: 200
+  learning_rate: 0.005
+  optimizer:
+    type: 'Adam'
+    args:
+      weight_decay: 0.0001
+
+loss:
+  type: 'MSELoss'
+  args: {}
+
+dataset:
+  module: 'Module.dataset'
+  class: 'wavDataset'
+  args:
+    preprocessing:
+      module: 'test.preprocessing'
+      function: 'get_preprocessing'
+      args:
+
+    train:
+      args:
+        wav_dir: 'data\EGG_data_0point1s'
+        csv_path: 'data\wavtxt'
+        group: ['n06', 'n07', 'n08', 'n09', 'n10', 'n14', 'n15', 'n16', 'n17', 'n18', 'n19', 'n20', 'n21', 'n22', 'n23']
+        feature: 'Pitch' # 'Raw', 'Pitch', 'MFCC', 'Chroma', 'ZCR', 'Energy', 'Spectrogram'
+      loader:
+        batch_size: 1
+        shuffle: True
+    valid:
+      args:
+        wav_dir: 'data\EGG_data_0point1s'
+        csv_path: 'data\wavtxt'
+        group: ['n03', 'n04', 'n05']
+        feature: 'Pitch' # 'Raw', 'Pitch', 'MFCC', 'Chroma', 'ZCR', 'Energy', 'Spectrogram'
+      loader:
+        batch_size: 1
+        shuffle: True
+    test:
+      args:
+        wav_dir: 'data\EGG_data_0point1s'
+        csv_path: 'data\wavtxt'
+        group: ['n01', 'n11', 'n12', 'n13']
+        feature: 'Pitch' # 'Raw', 'Pitch', 'MFCC', 'Chroma', 'ZCR', 'Energy', 'Spectrogram'
+      loader:
+        batch_size: 1
+        shuffle: True
+
+visualization:
+  enabled: True
+  plot_dir: './plots'
+
+export_loss:
+  enabled: True
+  export_dir: './losses'
