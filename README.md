@@ -6,6 +6,7 @@ This repository contains the implementation of a novel algorithm for predicting 
 
 ## What is Closed Quotient (CQ)?
 CQ represents the time ratio for which vocal folds are in contact during voice production. Traditionally, CQ is measured using mechanical or electrical methods, such as inverse filtering or electroglottography.
+
 ![CQ](./sample/cq_value1.JPG)
 ---
 
